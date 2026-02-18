@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Validate (Makefile)",
+      "type": "shell",
+      "command": "make validate",
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "ShellCheck: insta.sh",
+      "type": "shell",
+      "command": "make lint",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "Bash syntax check: insta.sh",
+      "type": "shell",
+      "command": "make syntax",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "Deps check",
+      "type": "shell",
+      "command": "make deps-check",
+      "presentation": { "reveal": "silent" }
+    },
+    {
+      "label": "Run (safe simulation)",
+      "type": "shell",
+      "command": "make run-safe",
+      "presentation": { "reveal": "always" }
+    }
+  ]
+}
