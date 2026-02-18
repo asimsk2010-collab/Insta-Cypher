@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# SAFETY GUARD — live execution is disabled by default to prevent misuse.
+# To test the repository use the provided safe simulation: `make run-safe` or `./simulate.sh`.
+printf "\e[1;93m[!] Live execution disabled by default — run `make run-safe` to simulate.\e[0m\n" >&2
+exit 1
+
 trap 'store;exit 1' 2
 string4=$(openssl rand -hex 32 | cut -c 1-4)
 string8=$(openssl rand -hex 32  | cut -c 1-8)
