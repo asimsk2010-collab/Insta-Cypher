@@ -81,7 +81,13 @@ After installation, you can run Insta-Cypher using the following command:
 ./insta.sh
 ```
 
-This command will start the script, allowing you to perform brute-force attacks on Instagram accounts.
+⚠️ IMPORTANT: The repository now includes a *safe simulation* mode and the real brute-force execution is intentionally disabled by default. Misuse of the real script against accounts you do not own is illegal.
+
+Safe simulation / evaluation (no network calls):
+- Run from Makefile: `make run-safe`
+- Or run directly: `./simulate.sh`
+
+The simulation prints example output and exercises the repository's CLI paths without contacting external services or performing login attempts.
 
 ## Video Demo
 
